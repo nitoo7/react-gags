@@ -4,6 +4,7 @@ import enUS from 'antd/lib/locale-provider/en_US';
 import './App.css';
 import {Provider} from 'react-redux';
 import configureStore from './store';
+import SiteLayout from './components/SiteLayout';
 
 const store = configureStore();
 class App extends Component {
@@ -11,7 +12,7 @@ class App extends Component {
     return (
       <Provider store={store}>
         <LocaleProvider locale={enUS}>
-          <p>Hello world....</p>
+          <SiteLayout />
         </LocaleProvider>
       </Provider>
     );
