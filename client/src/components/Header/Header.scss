@@ -1,0 +1,33 @@
+.header-container {
+
+  color: #fff;
+  display: flex;
+  height: 100%;
+  .header-title {
+    flex: 1;
+    display: flex;
+  }
+
+  .header-selectors {
+    flex: 10;
+    display: flex;
+
+    p {
+      margin-right: 30px;
+    }
+  }
+
+  .header-btns {
+    flex: 1;
+    display: flex;
+
+    .ant-btn {
+      margin-right: 10px;
+      margin-top: 9px;
+    }
+  }
+}
+
+// .ant-modal-mask {
+//   background-color: rgba(0,0,0,.8);
+// }

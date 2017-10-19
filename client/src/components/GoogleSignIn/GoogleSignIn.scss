@@ -1,0 +1,21 @@
+.login-btn-container {
+
+  .google-login-btn {
+
+    background: none;
+    border: none;
+    height: 100%;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  .google-userpic {
+    border-radius: 50%;
+    width: 40px;
+    margin-top: 4px;
+    cursor: pointer;
+  }
+
+}

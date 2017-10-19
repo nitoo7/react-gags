@@ -1,0 +1,46 @@
+.gag-card {
+  
+    max-width: 728px;
+    margin: auto;
+    background-color: #fff;
+    padding: 0;
+    margin-bottom: 20px;
+
+    .ant-card-body {
+      padding: 24px 0;
+    }
+  
+    .gag-title {
+  
+      padding: 10px 16px;
+  
+      h3 {
+        color: #000;
+      }
+    }
+  
+    .gag-image {
+  
+    }
+  
+    .gag-info {
+  
+      padding: 10px 10px 0px;
+      display: flex;
+
+      .gag-btns {
+
+        flex: 1;
+
+        i {
+          width: 50px;
+        }
+      }
+
+      .gag-stats {
+        flex: 1;
+        text-align: right;
+      }
+    }
+  }
+  

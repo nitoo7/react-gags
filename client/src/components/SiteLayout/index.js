@@ -25,8 +25,8 @@ class SiteLayout extends React.Component {
             <Switch>
               <Route exact path='/'
                 component={()=>(<GagsList/>)}/>
-              <Route exact path='/gag/:id'
-                component={()=>(<GagPage/>)}/>                
+              <Route path='/gag/:id'
+                component={GagPage}/>                
             </Switch>
           </Content>
           <Footer className='footer'>
