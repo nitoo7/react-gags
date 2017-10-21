@@ -1,9 +1,9 @@
 // grab the things we need
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 // create a schema
-var gagSchema = new Schema({
+const gagSchema = new Schema({
   gagId: {
     type: String,
     required: true
@@ -19,9 +19,6 @@ var gagSchema = new Schema({
   gagCreatedAt: Date
 });
 
-// the schema is useless so far
-// we need to create a model using it
-var Gag = mongoose.model('Gags', gagSchema);
+const Gag = mongoose.model('Gag', gagSchema);
 
-// make this available to our users in our Node applications
 module.exports = Gag;
