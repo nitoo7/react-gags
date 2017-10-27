@@ -1,3 +1,5 @@
+const axios = require('axios');
+
 export function setUserInfo(payload) {
   return {
     type: 'SET_USER_INFO',
@@ -54,4 +56,15 @@ export function getGagList(filterType) {
       }             
     ]
   }
+}
+
+export function postGag(gagData) {
+  console.log("ACTIONS==>", gagData)
+  axios.put('http://localhost:8000/gag/post', gagData)
+  .then(function (response) {
+    console.log(response);
+  })
+  .catch(function (error) {
+    console.log(error);
+  });  
 }

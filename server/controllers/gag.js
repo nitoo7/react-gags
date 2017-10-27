@@ -1,4 +1,5 @@
 const gagService = require('../services/gag.service');
+const _ = require('lodash');
 
 const fetchGagList = (req, res) => {
   gagService.fetchGagList().then((data) => {
@@ -13,6 +14,7 @@ const fetchGagInfo = (req, res) => {
 }
 
 const postGag = (req, res) => {
+  console.log("C===>", req.body)
   gagService.postGag(req.body).then((status) => {
     res.send({"status": "ok"});
   }, (err) => {
@@ -45,11 +47,24 @@ const deleteGag = (req, res) => {
   })
 }
 
+const mediaUpload = (req, res) => {
+  console.log("AAA", req.files[0])
+  const file = req.files[0];
+  if (_.isEmpty(file)) {
+    return Promise.reject('error');
+  } else {
+    gagService.mediaUpload(file).then((data) => {
+      res.send(data);
+    })
+  }
+}
+
 module.exports = {
   fetchGagList: fetchGagList,
   fetchGagInfo: fetchGagInfo,
   postGag: postGag,
   addComment: addComment,
   updateScores: updateScores,
-  deleteGag:deleteGag
+  deleteGag: deleteGag,
+  mediaUpload: mediaUpload 
 }
